@@ -24,6 +24,15 @@
 	--subtitle-color: linear-gradient(45deg, rgb(64, 40, 122) 0%, rgb(32, 123, 139) 100%);
 }
 
+@mixin title($font, $bg-color, $line-hz) {
+	font-size: $font;
+	line-height: $line-hz;
+	font-weight: 600;
+	background: var($bg-color);
+	color: transparent;
+	background-clip: text;
+}
+
 html {
 	font-size: 10px;
 }
@@ -34,6 +43,7 @@ body {
 	height: 100vh;
 	font-size: 2rem;
 	background: var(--main-gradient);
+	color: var(--black-color);
 }
 
 @import '../../node_modules/swiper/swiper.scss';
@@ -53,24 +63,14 @@ body {
 }
 
 .title {
-	font-size: 7rem;
-	font-weight: 600;
-	background: var(--second-gradient);
-	color: transparent;
-	background-clip: text;
+	@include title(7rem, --second-gradient, 7.5rem);
 }
 
 .subtitle {
-	font-weight: 600;
-	font-size: 4rem;
-	line-height: 4.5rem;
-	background: var(--subtitle-color);
-	color: transparent;
-	background-clip: text;
+	@include title(4rem, --subtitle-color, 4.5rem);
 }
 
 .text {
-	color: var(--black-color);
 	font-size: 3rem;
 	line-height: 4rem;
 }
@@ -78,7 +78,8 @@ body {
 .list {
 	li {
 		position: relative;
-		padding-left: 15px;
+		padding-left: 1.5rem;
+		font-size: 1.8rem;
 		&::before {
 			position: absolute;
 			content: '';

@@ -1,0 +1,19 @@
+.internet {
+	margin-top: 3rem;
+	&__title {
+		margin-bottom: 2rem;
+		font-size: 2.4rem;
+	}
+
+	&__list {
+		text-align: justify;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 40px;
+
+		li {
+			flex: 1 1 45%;
+		}
+	}
+}
+
