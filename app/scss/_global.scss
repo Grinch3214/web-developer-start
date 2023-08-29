@@ -14,10 +14,26 @@
   font-display: swap;
 }
 
+:root {
+	--white-color: #fff;
+	--black-color: #111;
+	--gray-color: rgb(168, 168, 168);
+	--green-color: rgb(38, 119, 38);
+	--main-gradient: linear-gradient(38deg, rgba(201,36,36,0.19) 8%, rgba(85,1,1,0.132) 22%, rgba(87,62,62,0.156) 34%, rgba(161,118,34,0.141) 48%, rgba(56,57,133,0.156) 61%, rgba(94,7,131,0.156) 76%);
+	--second-gradient: linear-gradient(45deg, rgba(76,0,255,1) 0%, rgba(0,215,255,1) 100%);
+	--subtitle-color: linear-gradient(45deg, rgb(64, 40, 122) 0%, rgb(32, 123, 139) 100%);
+}
+
+html {
+	font-size: 10px;
+}
+
 body {
 	font-family: 'Montserrat';
-	font-weight: 600;
+	font-weight: 400;
 	height: 100vh;
+	font-size: 2rem;
+	background: var(--main-gradient);
 }
 
 @import '../../node_modules/swiper/swiper.scss';
@@ -29,9 +45,48 @@ body {
 
 .swiper-slide {
 	text-align: center;
-	font-size: 18px;
-	background: #fff;
+	font-size: 2rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 0 40px;
+}
+
+.title {
+	font-size: 7rem;
+	font-weight: 600;
+	background: var(--second-gradient);
+	color: transparent;
+	background-clip: text;
+}
+
+.subtitle {
+	font-weight: 600;
+	font-size: 4rem;
+	background: var(--subtitle-color);
+	color: transparent;
+	background-clip: text;
+}
+
+.text {
+	color: var(--black-color);
+	font-size: 3rem;
+	line-height: 4rem;
+}
+
+.list {
+	li {
+		position: relative;
+		padding-left: 15px;
+		&::before {
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 6px;
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background: var(--subtitle-color);
+		}
+	}	
 }
