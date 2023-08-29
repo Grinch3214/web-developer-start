@@ -13,22 +13,16 @@
 	&__grid {
 		display: flex;
 		flex-flow: wrap;
-		gap: 10px;
-		// display: grid;
-		// grid-template-columns: repeat(3, 1fr);
-		// grid-template-rows: repeat(3, 1fr);
-		text-align: left;
+		gap: 40px;
+		text-align: justify;
 	}
 
 	&__grid-item {
 		flex: 1 1 30%;
-		// &:last-child {
-		// 	grid-area: 3 / 1 / 4 / 4;
-		// }
 	}
 
 	&__grid-item-title {
-		font-size: 2.2rem;
+		font-size: 2.4rem;
 		font-weight: 600;
 		margin-bottom: 15px;
 	}
@@ -36,7 +30,7 @@
 	&__grid-list {
 		li {
 			margin-bottom: 10px;
-			font-size: 1.6rem;
+			font-size: 1.8rem;
 		}
 	}
 }
