@@ -1,0 +1,19 @@
+.program {
+	max-width: 65vw;
+	margin: 0 auto;
+	text-align: justify;
+	&__inner {
+	}
+
+	&__title {
+		font-weight: 600;
+		margin-bottom: 2rem;
+		margin-top: 3rem;
+		@include title(2.4rem, --subtitle-color, 2.8rem);
+	}
+
+	&__txt {
+		margin-top: 1rem;
+		line-height: 2.4rem;
+	}
+}
