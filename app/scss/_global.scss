@@ -33,6 +33,12 @@
 	background-clip: text;
 }
 
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 html {
 	font-size: 10px;
 }
@@ -56,9 +62,7 @@ body {
 .swiper-slide {
 	text-align: center;
 	font-size: 2rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include flex-center;
 	padding: 0 6rem 0 4rem;
 }
 
