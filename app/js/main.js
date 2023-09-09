@@ -8,4 +8,3 @@ const swiper = new Swiper(".swiper", {
 		clickable: true,
 	},
 });
-console.log(swiper)
